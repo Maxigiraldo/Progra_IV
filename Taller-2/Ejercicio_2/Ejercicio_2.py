@@ -4,8 +4,8 @@ from io import *
 # Creamos una clase para usuarios
 class Usuarios:
     nombre = ""
-    def ingresar_profesion(self):
-        self.nombre = input("Ingrese su profesion: ")
+    def ingresar_profesion(self, nombre_usuario):
+        self.nombre = nombre_usuario
 # Creamos una lista para los usuarios
 usuarios = []
 
@@ -15,12 +15,12 @@ def ingresar_usuario():
     estado = True
     while estado:
         # Creamos un objeto de la clase Usuarios
+        nombre_usuario = input("Ingrese el nombre del usuario: ")
         usuario = Usuarios()
-        usuario.ingresar_profesion()
+        usuario.ingresar_profesion(nombre_usuario)
         usuarios.append(usuario)
-        print("Desea ingresar otro usuario? (si/no)")
-        respuesta = input()
-        if respuesta == "no":
+        respuesta = input("Desea ingresar otro usuario? (si/no)")
+        if respuesta.lower() == "no":
             estado = False
 
 # Creamos una funcion para buscar una cantidad de veces que se encuentra un usuario en la lista

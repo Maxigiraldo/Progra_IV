@@ -3,8 +3,3 @@ enfermera
 auxiliar
 medico
 auxiliar
-medico
-enfermera
-auxiliar
-medico
-auxiliar

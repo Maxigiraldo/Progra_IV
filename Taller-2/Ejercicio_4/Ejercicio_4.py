@@ -4,7 +4,7 @@ from io import *
 # Creamos una clase para libros
 class Libros:
     # Creamos sus atributos
-    nombre = " "
+    titulo = " "
     autor = " "
     editorial = " "
     numero_paginas = 0
@@ -12,9 +12,9 @@ class Libros:
     
     # Creamos sus metodos
     def leer_libro():
-        pass
+        print("Leyendo libro")
     def escribir_libro():
-        pass
+        print("Escribiendo libro")
 
 # Creamos una clase para casas
 class Casa:
@@ -27,26 +27,26 @@ class Casa:
     
     # Creamos sus metodos
     def vivir_en_casa():
-        pass
+        print("Viviendo en casa")
     
     def construir_casa():
-        pass
+        print("Construyendo casa")
 
 # Creamos una clase para peliculas
 class Pelicula:
     # Creamos sus atributos
-    nombre = " "
+    titulo = " "
     director = " "
     genero = " "
     duracion = 0
-    actores = []
+    genero = ""
     
     # Creamos sus metodos
     def ver_pelicula():
-        pass
+        print("Viendo pelicula")
     
     def grabar_pelicula():
-        pass
+        print("Grabando pelicula")
 
 # Creamos una clase para bodegas
 class Bodega:
@@ -55,78 +55,78 @@ class Bodega:
     direccion = " "
     numero_empleados = 0
     productos = []
-    tamanio = 0
+    capacidad = 0
     
     # Creamos sus metodos
-    def almacenar_productos():
-        pass
+    def disponibilidad():
+        print("Disponibilidad de productos")
     
     def retirar_productos():
-        pass
+        print("Retirar productos")
 
 # Creamos una clase para lamparas
 class Lampara:
     # Creamos sus atributos
-    marca = " "
+    estado = " "
     color = " "
     tipo = " "
-    precio = 0
-    voltaje = 0
+    material = 0
+    potencia = 0
     
     # Creamos sus metodos
     def encender_lampara():
-        pass
+        print("Encendiendo lampara")
     
     def apagar_lampara():
-        pass
+        print("Apagando lampara")
 
 # Creamos una clase para modems
 class Modem:
     # Creamos sus atributos
     marca = " "
     velocidad = 0
-    tipo = " "
-    precio = 0
-    modulacion = " "
+    modelo = " "
+    puertos = 0
+    estado = " "
     
     # Creamos sus metodos
-    def encender_modem():
-        pass
+    def reiniciar():
+        print("Reiniciando modem")
     
-    def apagar_modem():
-        pass
+    def conectar_modem():
+        print("Conectado a modem")
 
 # Creamos una clase para routers
 class Router:
     # Creamos sus atributos
     marca = " "
     velocidad = 0
-    tipo = " "
-    precio = 0
-    modulacion = " "
+    modelo = " "
+    alcance = 0
+    antenas = " "
     
     # Creamos sus metodos
-    def encender_router():
-        pass
+    def conectar_router():
+        print("Conectando router")
     
-    def apagar_router():
-        pass
+    def cambiar_contrasenia():
+        print("Cambiando contraseña")
 
 # Creamos una clase para maletines
 class Maletin:
     # Creamos sus atributos
     marca = " "
     color = " "
-    tamanio = 0
-    precio = 0
+    capacidad = 0
+    compartimientos = 0
     material = " "
     
     # Creamos sus metodos
     def guardar_objetos():
-        pass
+        print("Guardando objetos")
     
     def llevar_objetos():
-        pass
+        print("Llevando objetos")
     
 # Creamos una clase para pacientes oncológicos
 class PacienteOncologico:
@@ -139,10 +139,10 @@ class PacienteOncologico:
     
     # Creamos sus metodos
     def recibir_tratamiento():
-        pass
+        print("Recibiendo tratamiento")
     
     def mejorar_salud():
-        pass
+        print("Mejorando salud")
     
 # Creamos una clase para gatos
 class Gato:
@@ -155,7 +155,7 @@ class Gato:
     
     # Creamos sus metodos
     def maullar():
-        pass
+        print("Maullando")
     
     def comer():
-        pass
+        print("Comiendo")
