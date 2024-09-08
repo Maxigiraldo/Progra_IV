@@ -1,0 +1,24 @@
+Nombre: Luis
+Género: M
+Edad: 25
+Fecha de ingreso: 2024
+Valor hora: 2000.0
+Horas trabajadas: 10
+Salario: 20000.0
+Antigüedad: 0
+Pensión: 800.0
+Salud: 800.0
+Pensión anual: 9600.0
+
+Nombre: Mariana
+Género: F
+Edad: 27
+Fecha de ingreso: 2015
+Valor hora: 3000.0
+Horas trabajadas: 8
+Salario: 24000.0
+Antigüedad: 9
+Pensión: 960.0
+Salud: 960.0
+Pensión anual: 11520.0
+
