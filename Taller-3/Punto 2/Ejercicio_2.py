@@ -1,5 +1,5 @@
 # Por Maximiliano Giraldo Ocampo
-# Creación de la clase Rectangulo con los métodos area e imprimir_rectangulo
+# Creación de la clase Rectangulo con los métodos área e imprimir_rectangulo
 class Rectangulo:
     # Constructor de la clase con los atributos base y altura
     def __init__(self, base, altura):

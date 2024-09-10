@@ -55,7 +55,6 @@ class Empleado:
             file.write(f"Salud: {self.salud()}\n")
             file.write(f"Pensión anual: {self.pension_anual()}\n")
             file.write("\n")
-            file.close()
 
 # Ingreso de empleados
 def ingreso():

@@ -1,19 +1,20 @@
 # Por Maximiliano Giraldo Ocampo
 class Avion:
-    # Constructor de la clase
+    # Constructor de la clase, en el que incluiremos los atributos de la clase, abstrayendo los datos que se necesitan para crear un objeto de la clase en cuestión
     def __init__(self, modelo, capacidad, velocidad, peso):
         self.modelo = modelo
         self.capacidad = capacidad
         self.velocidad = velocidad
         self.peso = peso
     
-    # Métodos de la clase
+    # Métodos de la clase, en este caso, incluiremso los métodos que podrían realizar los objetos de la clase, por ahora serán métodos simples para representarlo
     def volar(self):
         print("El avión está volando")
         
     def aterrizar(self):
         print("El avión está aterrizando")
-        
+    
+# El resto de las clases se crean de la misma manera, con la diferencia de que se cambian los atributos y los métodos de la clase dependiendo de lo que se necesite
 class Celular:
     # Constructor de la clase
     def __init__(self, marca, modelo, color, almacenamiento):
