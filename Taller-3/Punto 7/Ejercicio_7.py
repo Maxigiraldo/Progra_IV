@@ -36,3 +36,5 @@ def main():
 
 # Ejecutamos la función principal
 main()
+
+#Nota: Los archivos que se creen en los ejercicios se crean en la carpeta donde se encuentra el archivo de ejecución.
