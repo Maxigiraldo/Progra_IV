@@ -1,9 +1,11 @@
 # Por Maximiliano Giraldo Ocampo
+# Superclase
 class Vehiculos:
     def __init__(self, color, ruedas):
         self.color = color
         self.ruedas = ruedas
 
+# Subclases
 class Coche(Vehiculos):
     def __init__(self, color, ruedas, velocidad, cilindrada):
         super().__init__(color, ruedas)
@@ -49,7 +51,8 @@ def catalogar(ruedas, vehiculos):
 
 def main():
     vehiculos = []
-
+    
+    # Instancias
     coche_1 = Coche("Rojo", 4, 150, 1500)
     vehiculos.append(coche_1)
     coche_2 = Coche("Azul", 4, 200, 1600)
@@ -75,6 +78,7 @@ def main():
     motocicleta_3 = Motocicleta("Blanca", 2, "Urbana", 160, 800)
     vehiculos.append(motocicleta_3)
     
+    # Menu
     while True:
         print("""    Menu 
                 1. Catalogar vehiculos
