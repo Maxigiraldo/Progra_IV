@@ -1,0 +1,18 @@
+--------------
+Color: Rojo
+Número de ruedas: 4
+Velocidad: 120
+Cilindraje: 2000
+--------------
+--------------
+Color: Blanco
+Número de ruedas: 4
+Velocidad: 100
+Cilindraje: 1200
+--------------
+--------------
+Color: Negro
+Número de ruedas: 4
+Velocidad: 150
+Cilindraje: 2100
+--------------
