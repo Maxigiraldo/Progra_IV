@@ -1,0 +1,9 @@
+Juan, 2019, juan@gmail
+Ingenieria, 100, 4.5, Si
+
+Juan, 2019, juan@gmail
+Ingenieria, 100, 4.5, Si
+
+Juan, 2019, juan@gmail
+20, 10, auxiliar, Ingenieria, Maestria, 2
+

@@ -1,0 +1,49 @@
+
+                            Nombre: Juan
+                            Telefono: 324523
+                            Saldo: 31000.0
+                            Tipo: Bus
+                            Dirección: cll 102 #12-34
+
+
+                            
+                            Nombre: Samantha
+                            Telefono: 3423523
+                            Saldo: 30000.0
+                            Tipo: Auto
+                            Dirección: cll 13 #24-30
+
+
+                            
+                            Nombre: Eusebio
+                            Telefono: 301020392
+                            Saldo: 50000.0
+                            Tipo: Moto
+                            Dirección: cll 23 #12-34
+
+
+                            
+                            Nombre: Carlos
+                            Telefono: 3012244023
+                            Saldo: 0.0
+                            Tipo: Taxi
+                            Dirección: cll 45 #56-78
+
+
+                            
+                            Nombre: Esmeralda
+                            Telefono: 324552023
+                            Saldo: 0.0
+                            Tipo: Taxi
+                            Dirección: cll 56 #78-90
+
+
+                            
+                            Nombre: Juan
+                            Telefono: 313455223
+                            Saldo: 30000.0
+                            Tipo: Buseta
+                            Dirección: avenida circunvalar
+
+
+                            
