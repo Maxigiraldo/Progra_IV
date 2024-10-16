@@ -1,4 +1,3 @@
-from modules.product import Electronic, Food, Clothes
 from modules.shop import Shop
 import json
 
@@ -15,35 +14,41 @@ def main():
         print("Que desea hacer?")
         print("1. Mostrar productos")
         print("2. Comprar productos")
-        print("3. Salir")
+        print("3. Agregar productos")
+        print("4. Salir")
         option = input("Ingrese la opcion: ")
         if option == "1":
             shop.show_products()
         elif option == "2":
             order_list = []
+            print("Ingrese los productos que desea comprar")
             while True:
                 name = input("Ingrese el nombre del producto: ")
-                # We search for the product in the data
-                found = False
-                for category, products in data.items():
-                    for product in products:
-                        if product["name"] == name:
-                            print(f"Producto disponible en la categoria {category}")
-                            stock = int(input("Ingrese la cantidad: "))
-                            order_list.append(shop.order_product(name, stock))
-                            found = True
-                            break
-                    if found:
-                        break
-                if not found:
-                    print("Ese producto no existe")
-                
-                new_order = input("Desea comprar otro producto? (y/n): ")
-                if new_order == "n":
+                stock = int(input("Ingrese la cantidad: "))
+                order = shop.order_product(name, stock)
+                if order == [0, 0] or order is None:
+                    print("No es posible realizar la compra por falta de cantidad o porque no tenemos el producto")
+                else:
+                    order_list.append(order)
+                print("Desea agregar otro producto? (s/n)")
+                add = input()
+                if add == "n":
                     break
-            print(f"El total a pagar es: {shop.payment(order_list)}")
-            shop.save_products()
+            total = shop.payment(order_list)
+            print(f"El total a pagar es: {total}")
         elif option == "3":
+            print("Ingrese los datos del producto")
+            print("Categorias: Electronic, Food, Clothes")
+            category = input("Ingrese la categoria: ")
+            name = input("Ingrese el nombre: ")
+            price = float(input("Ingrese el precio: "))
+            stock = int(input("Ingrese el stock: "))
+            shop.add_product(category, name, price, stock)
+        elif option == "4":
+            print("Guardando productos...")
+            shop.save_products()
+            print("Productos guardados")
+            print("Saliendo...")
             break
         else:
             print("Opcion invalida")

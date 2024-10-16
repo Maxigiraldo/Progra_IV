@@ -1,4 +1,5 @@
 import json
+from .product import Electronic, Food, Clothes
 
 class Shop:
     def __init__(self, data, path):
@@ -21,51 +22,55 @@ class Shop:
     def path(self, path):
         self.__path = path
     
+    def add_product(self, category, name, price, stock):
+        if category == "Electronic":
+            warranty = input("Ingrese la garantia: ")
+            product = Electronic(name, price, stock, warranty)
+        elif category == "Food":
+            expiration_date = input("Ingrese la fecha de vencimiento: ")
+            product = Food(name, price, stock, expiration_date)
+        elif category == "Clothes":
+            size = input("Ingrese la talla: ")
+            product = Clothes(name, price, stock, size)
+        if category in self.data:
+            self.data[category].append(product.json_return())
+        else:
+            print("Categoria no válida")
+
     def show_products(self):
-        print("Productos disponibles:")
-        for category, products in self.data.items():  # .items gets the key and value of the dictionary
+        for category in self.data:
             print(f"Categoria: {category}")
-            for product in products:
+            for product in self.data[category]:
                 print(f"\tNombre: {product['name']}")
                 print(f"\tPrecio: {product['price']}")
                 print(f"\tStock: {product['stock']}")
-                if category == "Electronics":
+                if category == "Electronic":
                     print(f"\tGarantia: {product['warranty']}")
                 elif category == "Food":
                     print(f"\tFecha de vencimiento: {product['expiration_date']}")
                 elif category == "Clothes":
                     print(f"\tTalla: {product['size']}")
-                print("\n")
-            print("\n")
     
     def payment(self, order_list):
         total = 0
-        for product in order_list:
-            for key in product:
-                # Iterating over the dictionary
-                for category, items in self.data.items():
-                    for item in items:
-                        if item["name"] == key:
-                            if product[key] >= 5:
-                                total += item["price"] * product[key] * 0.8  # 20% discount
-                            else:
-                                total += item["price"] * product[key]
+        for order in order_list:
+            if order is None:
+                continue
+            elif order[1] >= 5:
+                total += order[0] * order[1] * 0.8
+            else:
+                total += order[0] * order[1]
         return total
     
     def order_product(self, name, stock):
-        # We search for the product in the data
-        for category, products in self.data.items():
-            for product in products:
-                if product["name"] == name:
-                    if product["stock"] >= stock:
-                        product["stock"] -= stock
-                        print(f"Se han comprado {stock} {name}")
-                        return {name: stock}
+        for category in self.data:
+            for product in self.data[category]:
+                if product['name'] == name:
+                    if product['stock'] >= stock:
+                        product['stock'] -= stock
+                        return [product['price'], stock]
                     else:
-                        print(f"No hay suficiente cantidad de {name}")
-                        return None
-        print(f"Producto {name} no encontrado")
-        return None
+                        return [0, 0]
     
     def save_products(self):
         with open(self.path, "w") as file:

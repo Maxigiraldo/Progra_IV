@@ -61,6 +61,12 @@
             "price": 2.0,
             "stock": 90,
             "expiration_date": "2024-10-25"
+        },
+        {
+            "name": "Toblerone",
+            "price": 20.0,
+            "stock": 50,
+            "expiration_date": "20-01-2025"
         }
     ],
     "Clothes": [
@@ -91,8 +97,14 @@
         {
             "name": "Hat",
             "price": 20,
-            "stock": 73,
+            "stock": 71,
             "size": "One Size"
+        },
+        {
+            "name": "Adidas Shoes",
+            "price": 200.0,
+            "stock": 35,
+            "size": "10"
         }
     ]
 }
