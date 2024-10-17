@@ -56,10 +56,13 @@ class Shop:
         for order in order_list:
             if order is None:
                 continue
-            elif order[1] >= 5:
-                total += order[0] * order[1] * 0.8
-            else:
-                total += order[0] * order[1]
+            for category in self.data:
+                for product in self.data[category]:
+                    if product['name'] == order[0]:
+                        if order[1] >= 5:
+                            total += product['price'] * order[1] * 0.9
+                        else:
+                            total += product['price'] * order[1]
         return total
     
     def order_product(self, name, stock):
@@ -68,9 +71,10 @@ class Shop:
                 if product['name'] == name:
                     if product['stock'] >= stock:
                         product['stock'] -= stock
-                        return [product['price'], stock]
+                        return [product['name'], stock]
                     else:
                         return [0, 0]
+        return None
     
     def save_products(self):
         with open(self.path, "w") as file:
